@@ -41,7 +41,7 @@ st.image(img, caption='Gold ', use_column_width=True)
 submit= st.button(label="get prediction")
 
 if submit:
-    prediction_2 = pd.DataFrame(model.forecast(n),columns=['Price'])
+    prediction_2 = pd.DataFrame(model.forecast(n),columns=['Forecasted Price'])
     st.write(prediction_2)
     plt.figure(figsize = (10, 6))
     plt.plot(prediction_2)
